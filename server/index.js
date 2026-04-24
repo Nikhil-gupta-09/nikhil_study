@@ -25,7 +25,7 @@ app.use(
 	cors({
 		origin: [
 			"http://localhost:3000",
-			"frontend url "
+			"https://studynotion-nikhi.netlify.app"
 		],
 
 		credentials: true,
