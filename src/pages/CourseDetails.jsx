@@ -95,6 +95,7 @@ const CourseDetails = () => {
     }
 
     const {
+        // eslint-disable-next-line no-unused-vars
         _id: course_id,
         courseName,
         description,

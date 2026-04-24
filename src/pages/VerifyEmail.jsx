@@ -15,7 +15,8 @@ const VerifyEmail = () => {
 
   useEffect(() => {
     if (!signupData) navigate('/signup')
-  }, [])
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [signupData, navigate])
 
   const handleVerifyAndSignup = (e) => {
     e.preventDefault();
