@@ -8,33 +8,33 @@ import { sendOtp, signUp } from "../services/operations/authApi";
 import { useNavigate } from "react-router-dom";
 
 const VerifyEmail = () => {
-    const [otp, setOtp] = useState(""); 
-    const {loading, signupData} = useSelector((state)=> state.auth); 
-    const dispatch= useDispatch();  
-    const navigate = useNavigate();
-    
-    useEffect(() => {
-      if(!signupData) navigate('/signup')
-    }, [])
-    
-    const handleVerifyAndSignup = (e) => {
-        e.preventDefault();
-        const {
-            accountType,
-            firstName,
-            lastName,
-            email,
-            password,
-            confirmPassword,
-        } = signupData
-        dispatch(signUp(accountType,
-            firstName,
-            lastName,
-            email,
-            password,
-            confirmPassword,
-            otp, navigate))
-    }
+  const [otp, setOtp] = useState("");
+  const { loading, signupData } = useSelector((state) => state.auth);
+  const dispatch = useDispatch();
+  const navigate = useNavigate();
+
+  useEffect(() => {
+    if (!signupData) navigate('/signup')
+  }, [])
+
+  const handleVerifyAndSignup = (e) => {
+    e.preventDefault();
+    const {
+      accountType,
+      firstName,
+      lastName,
+      email,
+      password,
+      confirmPassword,
+    } = signupData
+    dispatch(signUp(accountType,
+      firstName,
+      lastName,
+      email,
+      password,
+      confirmPassword,
+      otp, navigate))
+  }
 
   return (
     <div className="min-h-[calc(100vh-3.5rem)] grid place-items-center">
