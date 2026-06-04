@@ -180,7 +180,7 @@ const Footer = () => {
             })}
           </div>
 
-          <div className="text-center">Made with ❤️ © 2026 StudyNotion</div>
+          <div className="text-center">Designed & Developed by Nikhil Gupta © 2026</div>
         </div>
       </div>
     </div>
